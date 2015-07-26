@@ -1,10 +1,11 @@
 {
-  "name": "dark-side",
+  "name": "palpatine",
   "version": "0.1.0",
-  "description": "Come to the dark side, we have cookies!",
+  "description": "Come to the dark side, we have your cookies!",
   "main": "app.js",
   "scripts": {
-    "test": "npm test"
+    "test": "./node_modules/lab/bin/lab --coverage --threshold 75 --leaks",
+    "test-cov-html": "./node_modules/lab/bin/lab --coverage --threshold 75 --leaks --reporter html --output coverage/coverage.html"
   },
   "repository": {
     "type": "git",
@@ -27,11 +28,16 @@
     "hapi-bunyan": "^0.6.0",
     "hapi-swaggered": "^2.2.0",
     "hapi-swaggered-ui": "^1.3.1",
-    "joi": "^6.4.2"
+    "joi": "^6.4.2",
+    "zombie": "^4.0.13"
   },
   "devDependencies": {
     "code": "^1.4.0",
     "jasmine": "^2.3.1",
-    "lab": "^5.10.0"
+    "lab": "^5.10.0",
+    "rewire": "^2.3.4"
+  },
+  "directories": {
+    "test": "test"
   }
 }
